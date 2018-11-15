@@ -6,7 +6,6 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
-import android.widget.LinearLayout;
 
 import com.alexandreribeiro.appcarrosandroid.R;
 import com.alexandreribeiro.appcarrosandroid.adapter.CarsListAdapter;
@@ -20,7 +19,7 @@ import java.util.List;
 
 public class MainActivity extends AppCompatActivity {
 
-    ViewHolder mViewHolder = new ViewHolder();
+    ViewHolderMain mViewHolderMain = new ViewHolderMain();
     private Context mContext;
 
     @Override
@@ -36,7 +35,7 @@ public class MainActivity extends AppCompatActivity {
         carList.addAll(carMock.getmListCars());
 
         // 1 - obter a recyclerView
-        this.mViewHolder.recyclerViewCars = findViewById(R.id.recyclerCarsId);
+        this.mViewHolderMain.recyclerViewCars = findViewById(R.id.recyclerCarsId);
 
         //implementar a interface
         //para implementar a interface dessa forma faço uma classe anonima
@@ -57,15 +56,15 @@ public class MainActivity extends AppCompatActivity {
         //2 - definir adapter
         //fazer que o recyclerView e a listagem de comuniquem
         CarsListAdapter carsListAdapter = new CarsListAdapter(carList,listener);
-        this.mViewHolder.recyclerViewCars.setAdapter(carsListAdapter);
+        this.mViewHolderMain.recyclerViewCars.setAdapter(carsListAdapter);
 
         //3 - definir layout
         LinearLayoutManager linearLayoutManager = new LinearLayoutManager(this);
-        this.mViewHolder.recyclerViewCars.setLayoutManager(linearLayoutManager);
+        this.mViewHolderMain.recyclerViewCars.setLayoutManager(linearLayoutManager);
 
     }
 
-    private static class ViewHolder {
+    private static class ViewHolderMain {
         RecyclerView recyclerViewCars;
     }
 }

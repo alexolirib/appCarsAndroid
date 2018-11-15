@@ -4,7 +4,7 @@ public class Car {
     private Integer id;
     private String model;
     private Integer horsePower;
-    public Double price;
+    private Double price;
 
     public Car(Integer id, String model, Integer horsePower, Double price) {
         this.id = id;

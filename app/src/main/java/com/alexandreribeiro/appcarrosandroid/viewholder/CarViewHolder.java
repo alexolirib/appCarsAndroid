@@ -25,7 +25,7 @@ public class CarViewHolder extends RecyclerView.ViewHolder{
         this.mTextModel.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                //delego para quem tiver chamando o metodo
+                //delega para quem tiver chamando o evento
                 listener.onClick(car.getId());
             }
         });
