@@ -2,6 +2,7 @@ package com.alexandreribeiro.appcarrosandroid.views;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.alexandreribeiro.appcarrosandroid.R;
@@ -20,11 +21,19 @@ public class DetailsActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_details);
 
-        mCarMock = new CarMock();
 
-        this.mViewHolderDetails.txtModel = this.findViewById(R.id.text_model);
-        this.mViewHolderDetails.txtHorsePower = this.findViewById(R.id.txt_horse_power);
-        this.mViewHolderDetails.txtPrice = this.findViewById(R.id.text_price);
+        getSupportActionBar().setDisplayShowTitleEnabled(false);
+        //exibir um icon em vez de title
+        getSupportActionBar().setDisplayShowHomeEnabled(true);
+        getSupportActionBar().setIcon(R.mipmap.ic_launcher);
+
+        mCarMock = new CarMock(DetailsActivity.this);
+
+        this.mViewHolderDetails.txtModel = this.findViewById(R.id.details_car_model);
+        this.mViewHolderDetails.txtHorsePower = this.findViewById(R.id.details_car_horse_power);
+        this.mViewHolderDetails.txtPrice = this.findViewById(R.id.details_car_price);
+        this.mViewHolderDetails.txtmMnufacture = this.findViewById(R.id.details_car_manufacture);
+        this.mViewHolderDetails.imgCar = this.findViewById(R.id.details_picture_car);
 
         this.getDataFromActivity();
 
@@ -35,7 +44,9 @@ public class DetailsActivity extends AppCompatActivity {
     private void setData(){
         this.mViewHolderDetails.txtModel.setText(mCar.getModel());
         this.mViewHolderDetails.txtHorsePower.setText(mCar.getHorsePower().toString());
-        this.mViewHolderDetails.txtPrice.setText(mCar.getPrice().toString());
+        this.mViewHolderDetails.txtPrice.setText("R$ "+mCar.getPrice().toString()+",00");
+        this.mViewHolderDetails.txtmMnufacture.setText(mCar.getManufacture().toString());
+        this.mViewHolderDetails.imgCar.setImageDrawable(mCar.getPicture());
     }
 
     private void getDataFromActivity(){
@@ -49,5 +60,7 @@ public class DetailsActivity extends AppCompatActivity {
         TextView txtModel;
         TextView txtHorsePower;
         TextView txtPrice;
+        TextView txtmMnufacture;
+        ImageView imgCar;
     }
 }

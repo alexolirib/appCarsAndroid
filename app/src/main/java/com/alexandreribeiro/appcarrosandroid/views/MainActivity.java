@@ -27,10 +27,16 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+        getSupportActionBar().setDisplayShowTitleEnabled(false);
+        //exibir um icon em vez de title
+        getSupportActionBar().setDisplayShowHomeEnabled(true);
+        getSupportActionBar().setIcon(R.mipmap.ic_launcher);
+
+
         this.mContext = this;
 
         //meu mock
-        CarMock carMock = new CarMock();
+        CarMock carMock = new CarMock(MainActivity.this);
         List<Car> carList = new ArrayList<>();
         carList.addAll(carMock.getmListCars());
 
