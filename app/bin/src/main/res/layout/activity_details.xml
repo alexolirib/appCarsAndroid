@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_details"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    tools:context=".views.DetailsActivity">
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:paddingBottom="16dp"
+        android:paddingLeft="16dp"
+        android:paddingRight="16dp"
+        android:paddingTop="16dp">
+
+    <ImageView
+        android:id="@+id/details_picture_car"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/audir8"
+        android:layout_gravity="center"
+        android:layout_margin="5dp"
+        />
+    <TextView
+        android:id="@+id/details_car_model"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="5sp"
+        android:layout_gravity="center"
+        android:textStyle="bold"
+        android:textSize="18sp"
+        android:text="Audi R8"
+        android:textAllCaps="true"/>
+    <TextView
+        android:id="@+id/details_car_manufacture"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:text="audi"
+        android:textSize="6sp"
+        android:textAllCaps="true"
+        android:textStyle="bold"/>
+
+    <TextView
+        android:id="@+id/details_car_horse_power"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="25dp"
+        android:layout_marginBottom="0dp"
+        android:textStyle="bold"
+        android:textSize="35sp"
+        android:text="610"
+        android:textAllCaps="true"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="5dp"
+        android:textStyle="bold"
+        android:textSize="8sp"
+        android:text="CAVALOS"
+        android:textAllCaps="true"/>
+
+    <TextView
+        android:id="@+id/details_car_price"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="15dp"
+        android:textStyle="bold"
+        android:textSize="30sp"
+        android:text="R$ 1165338.0"
+        android:textColor="@color/colorPrimary"
+        android:textAllCaps="true"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="5dp"
+        android:textStyle="bold"
+        android:textSize="8sp"
+        android:text="valor"
+        android:textAllCaps="true"/>
+
+    </LinearLayout>
+</ScrollView>
